@@ -28,6 +28,10 @@ pipeline {
               sh "echo 'environment=${environment}'"
               sh "echo 'environment=${customer}'"
               sh "echo 'environment=${slot}'"
+              
+              def yamlFile = readYaml file:'customerProperties.yaml'
+              Name=yamlFile.customer.Name
+              sh "echo 'Name=${Name}'"
             }
           }
         }
