@@ -25,10 +25,9 @@ pipeline {
               customer = properties['customer'] 
               slot = properties['slot'] 
               
-              echo '${environment}'
-              echo '${customer}'
-              echo '${slot}'
-
+              sh "echo 'environment=${environment}'"
+              sh "echo 'environment=${customer}'"
+              sh "echo 'environment=${slot}'"
             }
           }
         }
