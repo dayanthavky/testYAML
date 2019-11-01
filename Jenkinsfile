@@ -26,8 +26,8 @@ pipeline {
               slot = properties['slot'] 
               
               sh "echo 'environment=${environment}'"
-              sh "echo 'environment=${customer}'"
-              sh "echo 'environment=${slot}'"
+              sh "echo 'customer=${customer}'"
+              sh "echo 'slot=${slot}'"
               
               def yamlFile = readYaml file:'customerProperties.yaml'
               Name=yamlFile.customer.Name
