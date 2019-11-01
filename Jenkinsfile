@@ -1,5 +1,7 @@
 pipeline {
-   // agent { label 'macos'}
+    agent {
+        docker { image 'node:7-alpine' }
+    }
 
     environment {
       pqr = ""
