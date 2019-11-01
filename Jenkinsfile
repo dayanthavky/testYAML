@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'macos'}
+   // agent { label 'macos'}
 
     parameters {
 
@@ -30,7 +30,6 @@ pipeline {
           }
         }
       }
-    }
 
     post {
       success {
