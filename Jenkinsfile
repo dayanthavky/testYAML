@@ -18,8 +18,6 @@ pipeline {
         steps {
           script {
               echo 'Starting'
-              sh '$PWD'
-              sh 'ls'
               
               def d = [environment: 'a', customer: 'b', slot: 'c']
               def properties = readProperties file: 'gradle.properties'
