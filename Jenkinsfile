@@ -22,9 +22,10 @@ pipeline {
               sh 'ls'
               
               node{
-              def yamlFile=readYaml (file:'customerProperties.yaml')
+                    def yamlFile=readYaml (file:'customerProperties.yaml')
+                    echo 'yamlFile.customer.Name'
               }
-              echo 'yamlFile.customer.Name'
+
 
             }
           }
