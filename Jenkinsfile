@@ -19,12 +19,10 @@ pipeline {
           script {
                  echo 'Starting'
               node{
-                yamlFile = readYaml file:'customerProperties.yaml'
+                yamlFile=readYaml file:'customerProperties.yaml'
               }
               
-              customerName = yamlFile.customer.Name
-              
-              echo ${customerName}
+              echo yamlFile.customer.Name
 
             }
           }
