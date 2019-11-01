@@ -1,14 +1,6 @@
 pipeline {
    // agent { label 'macos'}
 
-    parameters {
-
-    }
-
-    tools {
-      gradle 'latest'
-    }
-
     environment {
       pqr = ""
       slot = 0
