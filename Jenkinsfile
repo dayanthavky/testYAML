@@ -22,8 +22,8 @@ pipeline {
               sh 'ls'
               
               node{
-                    def yamlFile=readYaml (file:'customerProperties.yaml')
-                    echo 'yamlFile.customer.Name'
+                  def yamlFile = readYaml file: "customerProperties.yaml"
+                  echo 'yamlFile.customer.Name'
               }
 
 
