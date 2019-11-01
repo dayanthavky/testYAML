@@ -18,7 +18,6 @@ pipeline {
         steps {
           script {
               echo 'Starting'
-              sh 'chmod 777 *'
               sh '$PWD'
               sh 'ls'
               
