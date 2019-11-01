@@ -17,7 +17,10 @@ pipeline {
       stage('Setup') {
         steps {
           script {
-                 echo 'Starting'
+              echo 'Starting'
+              sh '$PWD'
+              sh 'ls'
+              
               node{
                 yamlFile=readYaml file:'customerProperties.yaml'
               }
