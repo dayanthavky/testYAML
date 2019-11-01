@@ -21,11 +21,15 @@ pipeline {
               sh '$PWD'
               sh 'ls'
               
-              node{
-                  def yamlFile = readYaml file: "customerProperties.yaml"
-                  echo 'yamlFile.customer.Name'
-              }
-
+              def d = [environment: 'a', customer: 'b', slot: 'c']
+              def properties = readProperties file: 'gradle.properties'
+              environment = properties['environment']  
+              customer = properties['customer'] 
+              slot = properties['slot'] 
+              
+              echo ${environment}
+              echo ${customer}
+              echo ${slot}
 
             }
           }
