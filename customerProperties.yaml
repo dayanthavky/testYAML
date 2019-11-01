@@ -1,4 +1,5 @@
---- !customer.properties
+---
+#!customer.properties
 # CONFIDENTIAL - STRICTLY FOR INTERNAL USE ONLY
 # Copyright (C) V-Key Pte Ltd
 # This is a standard Customer information file required for any CSRM ticket.
