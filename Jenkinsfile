@@ -17,8 +17,14 @@ pipeline {
       stage('Setup') {
         steps {
           script {
-
                  echo 'Starting'
+              node{
+                yamlFile = readYaml file:'customerProperties.yaml'
+              }
+              
+              customerName = yamlFile.customer.Name
+              
+              echo ${customerName}
 
             }
           }
