@@ -21,7 +21,7 @@ pipeline {
               sh '$PWD'
               sh 'ls'
               
-              yamlFile=readYaml file:'customerProperties.yaml'
+              yamlFile=readYaml (file:'customerProperties.yaml')
 
               echo 'yamlFile.customer.Name'
 
