@@ -30,7 +30,7 @@ pipeline {
               sh "echo 'slot=${slot}'"
               
               def yamlFile = readYaml file:'customerProperties.yaml'
-              Name=yamlFile.customer.Name
+              Name = yamlFile.customer.Name
               sh "echo 'Name=${Name}'"
             }
           }
