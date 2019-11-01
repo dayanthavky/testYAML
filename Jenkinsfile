@@ -23,7 +23,7 @@ pipeline {
               
               yamlFile=readYaml file:'customerProperties.yaml'
 
-              echo yamlFile.customer.Name
+              echo 'yamlFile.customer.Name'
 
             }
           }
