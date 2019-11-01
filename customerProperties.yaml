@@ -1,0 +1,116 @@
+--- !customer.properties
+# CONFIDENTIAL - STRICTLY FOR INTERNAL USE ONLY
+# Copyright (C) V-Key Pte Ltd
+# This is a standard Customer information file required for any CSRM ticket.
+# Any CSRM ticket raised is required to be furnished with this file attached.
+#
+# WARNING
+# Failure to provide this file will cause your request to be rejected / unprocessed.
+# Any incomplete information will cause delay on processing your request.
+#
+customer:
+  #
+  # MANDATORY
+  # Fill this up with your Customer Name
+  # The value must be predefined value recognized by system.
+  # Refer to Confluence page to get the correct registered name for your Customer at https://bit.ly/2PDoH6S
+  Name: Company_78_VBank
+  #
+  # MANDATORY
+  # Fill this up with your Customer ID value
+  # The value must be predefined value recognized by system.
+  # Refer to Confluence page to get the correct registered name for your Customer at https://bit.ly/2PDoH6S
+  # Replace ... with correct value
+  ID: 78
+  #
+  # OPTIONAL
+  # If the customer is using a specific customer key please indicate the cust_key (Optional)
+  # Refer to Confluence page to get the correct key value for your Customer at https://bit.ly/322jqIz
+  # Replace ... with correct value
+  cust_key:
+#
+# Gradle script to construct the Customer Directory Name at runtime
+# customerDir="Company" + customerId + customerName
+#
+BundleID:
+  # MANDATORY
+  # Fill this up with your Customer's application Bundle Identifier or Package ID
+  # Each mobile application, be it iOS or Android, has unique identifier called as "Bundle ID"
+  # This Bundle ID is required as part of asset / license generation
+  # Replace ... with correct value
+  # iOSBundleId: ['com.aaa.bbb', 'com.ccc.ddd', 'com.eee.fff']
+  # androidBundleId: ['com.aaa.bbb', 'com.ccc.ddd', 'com.eee.fff']
+  iOSBundleId:
+  androidBundleId:
+#
+# MANDATORY
+#
+mTLS_Details:
+  # Specifies whether your Customer requires mTLS connectivity or not
+  # Accepted values are: true, false
+  # mtlsRequired=true, means Customer needs mTLS connectivity between the app and the server.
+  # mtlsRequired=false, means Customer doesn't need mTLS connectivity at all.
+  # Replace ... with correct value
+  mtlsRequired:
+  #Enter name of the mTLS file
+  mtlsName:
+#
+# MANDATORY
+#
+TTK_Details:
+  # Specifies whether your Customer uses their own TTK cert or not
+  # Accepted values are: true, false
+  # When you filled up true, ensure to attach your Customer's TTK cert in the ticket.
+  # useOwnTTKCert=true, means Customer will supply their own TTK cert.
+  # useOwnTTKCert=false, means Customer will use V-Key's default TTK cert.
+  # Replace ... with correct value
+  useOwnTTKCert:
+  #Enter name of the TTK file
+  ttkName:
+#
+# MANDATORY
+#
+Manageability_PQR:
+  # This is for Manageability mode indicator
+  # Accepted values are: 1, 0
+  # Manageability=1, means customer application is managed using V-Track Server
+  # Manageability=0, means customer application is NOT using V-Track Server
+  # WARNING
+  # Manageability=0 also means that there is NO troubleshooting log will be sent to server.
+  Manageability:
+  #
+  # MANDATORY
+  # PQR stands for "Post Quantum Requirement". It also means Strong Crypto.
+  # Accepted values are: true, false
+  # PQR=true, means Customer needs Strong Crypto encryption mode.
+  # PQR=false, means Customer needs Light Crypto encryption mode.
+  is_pqr: false
+#
+# MANDATORY
+#
+slotInformation:
+  # This is HSM Slot required for Jenkins job processing
+  # Refer to Confluence page to get the correct slot no for your Customer at https://bit.ly/324WkRE
+  hsm_slot: 4
+  # MANDATORY
+  # This is HSM Slot required for customer who uses Crypto TA
+  # Refer to Confluence page to get the correct slot no for your Customer at https://bit.ly/324WkRE
+  crypto_slot: 6
+#
+# OPTIONAL
+#
+additionalDetails:
+  # IGNORE
+  # Used by SingPass / GovTech
+  # Please DO NOT modify any value in below line items
+  asset_gen_folder:
+  # IGNORE
+  # Used by SingPass / GovTech
+  # Please DO NOT modify any value in below line items
+  artifact_project:
+  # IGNORE
+  # Used by UOB Singapore
+  # Please DO NOT modify any value in below line items
+  FRM: 1762e71054b597583504b12cfdf5f40d0b67a26e9d111707df8272b8101a92de
+  FRK: 8e5ce9e7f86f7af8614228073b523c938e124403ee0f42b1f87c1ca282f774d8
+...
