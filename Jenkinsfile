@@ -21,10 +21,8 @@ pipeline {
               sh '$PWD'
               sh 'ls'
               
-              node{
-                yamlFile=readYaml file:'customerProperties.yaml'
-              }
-              
+              yamlFile=readYaml file:'customerProperties.yaml'
+
               echo yamlFile.customer.Name
 
             }
