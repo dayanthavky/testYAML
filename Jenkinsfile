@@ -18,17 +18,7 @@ pipeline {
         steps {
           script {
               echo 'Starting'
-              
-              def d = [environment: 'a', customer: 'b', slot: 'c']
-              def properties = readProperties file: 'gradle.properties'
-              environment = properties['environment']  
-              customer = properties['customer'] 
-              slot = properties['slot'] 
-              
-              sh "echo 'environment=${environment}'"
-              sh "echo 'customer=${customer}'"
-              sh "echo 'slot=${slot}'"
-              
+             
               def yamlFile = readYaml file:'customerProperties.yaml'
               Name = yamlFile.customer.Name
               sh "echo 'Name=${Name}'"
